@@ -553,6 +553,15 @@ type Post struct {
 	IsSelfPost bool `json:"is_self"`
 	Saved      bool `json:"saved"`
 	Stickied   bool `json:"stickied"`
+
+	MediaMetadata map[string]MediaMetadata `json:"media_metadata"`
+}
+
+type MediaMetadata struct {
+	MediaType string `json:"e"`
+	ID        string `json:"id"`
+	MimeType  string `json:"m"`
+	Status    string `json:"status"`
 }
 
 // Subreddit holds information about a subreddit
